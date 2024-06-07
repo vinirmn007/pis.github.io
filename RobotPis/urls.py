@@ -36,5 +36,6 @@ urlpatterns = [
     path('diagramaClases/', diagramaClases, name='diagramaClases'),
     path('sensores/', sensor, name='sensores'),
     path('sensores/<int:id>/', sensorDetail, name='sensorDetail'),
-    path('materias/', materias, name='materias')
+    path('materias/', materias, name='materias'),
+    path('historiaUsuario/', historiaUsuario, name='historiaUsuario')
 ]

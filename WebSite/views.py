@@ -37,3 +37,6 @@ def diagramaClases (request):
 
 def materias (request):
     return render(request, 'materias.html')
+
+def historiaUsuario(request):
+    return render(request, 'historiasUsuario.html')
