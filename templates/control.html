@@ -12,21 +12,33 @@
     <h2>Video-Cámara de Brazo Robotico</h2>
         <img id="videoStream" src="http://10.20.136.120:81/stream" alt="Video Stream">
     <h2>Control Angulo Camara</h2>
-        <form method="get" action="">
-        <label for="angle">Ángulo:</label>
-        <input type="range" id="angle" name="angle" min="0" max="180" value="90">
-        <span id="angleValue">{{ angle }}</span>
+    <form method="get" action="">
+        <label for="camera">Camara:</label>
+        <input type="range" id="camera" name="camera" min="0" max="180" value="90">
+        <span id="anguloCam">{{ camera }}</span>
+
+        <label for="base">Base:</label>
+        <input type="range" id="base" name="base" min="0" max="180" value="90">
+        <span id="anguloBas">{{ base }}</span>
+
         <button type="submit">Mover</button>
     </form>
     <script>
-        const slider = document.getElementById('angle');
-        const angleValue = document.getElementById('angleValue');
+        const sliderCam = document.getElementById('camera');
+        const anguloCam = document.getElementById('anguloCam');
+        const sliderBas = document.getElementById('base');
+        const anguloBas = document.getElementById('anguloBas');
 
-        slider.addEventListener('input', function() {
-            angleValue.textContent = slider.value;
+        sliderCam.addEventListener('input', function() {
+            anguloCam.textContent = sliderCam.value;
         });
 
-        angleValue.textContent = slider.value;
+        sliderBas.addEventListener('input', function() {
+            anguloBas.textContent = sliderBas.value;
+        });
+
+        anguloCam.textContent = sliderCam.value;
+        anguloBas.textContent = sliderBas.value;
     </script>
 </body>
 </html>

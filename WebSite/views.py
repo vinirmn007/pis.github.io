@@ -44,9 +44,9 @@ def historiaUsuario(request):
     return render(request, 'historiasUsuario.html')
 
 def control_servo(request):
-    if 'angle' in request.GET:
-        angle = request.GET['angle']
-        esp32_ip = 'http://192.168.100.61' # Cambia a la IP de tu ESP32
-        response = requests.get(f'{esp32_ip}/?angle={angle}')
-        return HttpResponse(f'Servomotor movido a {angle} grados')
+    if 'camera' in request.GET and 'base' in request.GET:
+        camera = request.GET['angle']
+        base = request.GET['base']
+        esp32_ip = 'http://10.20.136.210' # Cambia a la IP de tu ESP32
+        response = requests.get(f'{esp32_ip}/?camera={camera}&base={base}')
     return render(request, 'control.html')
