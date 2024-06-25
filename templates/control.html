@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de Servomotor</title>
 </head>
+
 <body>
+    
     <h1>Control de Servomotor</h1>
-    <form method="get" action="">
+    <h2>Video-Cámara de Brazo Robotico</h2>
+        <img id="videoStream" src="http://192.168.0.184:81/stream" alt="Video Stream">
+    <h2>Control Angulo Camara</h2>
+        <form method="get" action="">
         <label for="angle">Ángulo:</label>
         <input type="range" id="angle" name="angle" min="0" max="180" value="90">
         <span id="angleValue">{{ angle }}</span>
