@@ -9,8 +9,19 @@
     <h1>Control de Servomotor</h1>
     <form method="get" action="">
         <label for="angle">Ángulo:</label>
-        <input type="number" id="angle" name="angle" min="0" max="180">
+        <input type="range" id="angle" name="angle" min="0" max="180" value="90">
+        <span id="angleValue">{{ angle }}</span>
         <button type="submit">Mover</button>
     </form>
+    <script>
+        const slider = document.getElementById('angle');
+        const angleValue = document.getElementById('angleValue');
+
+        slider.addEventListener('input', function() {
+            angleValue.textContent = slider.value;
+        });
+
+        angleValue.textContent = slider.value;
+    </script>
 </body>
 </html>
