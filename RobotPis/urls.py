@@ -37,5 +37,6 @@ urlpatterns = [
     path('sensores/', sensor, name='sensores'),
     path('sensores/<int:id>/', sensorDetail, name='sensorDetail'),
     path('materias/', materias, name='materias'),
-    path('historiaUsuario/', historiaUsuario, name='historiaUsuario')
+    path('historiaUsuario/', historiaUsuario, name='historiaUsuario'),
+    path('control_servo/', control_servo, name='control_servo'),
 ]
